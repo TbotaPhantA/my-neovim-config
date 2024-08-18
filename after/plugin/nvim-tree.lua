@@ -17,8 +17,13 @@ local function my_on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-  vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle, opts('Toggle'))
-  vim.keymap.set("n", "<A-;>", vim.cmd.NvimTreeFocus, opts('Focus'))
+  vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
+  vim.keymap.set('n', '<A-;>', vim.cmd.NvimTreeFocus)
+  vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
+  vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', '<A-n>', api.fs.create, opts('Create File Or Directory'))
+  vim.keymap.set('n', '<Del>', api.fs.remove, opts('Delete'))
+  vim.keymap.set('n', '<A-r>', api.fs.rename, opts('Rename'))
 end
 
 -- pass to setup along with your other options
