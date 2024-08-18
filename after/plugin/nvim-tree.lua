@@ -17,8 +17,8 @@ local function my_on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-  vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
-  vim.keymap.set("n", "<A-;>", vim.cmd.NvimTreeFocus)
+  vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle, opts('Toggle'))
+  vim.keymap.set("n", "<A-;>", vim.cmd.NvimTreeFocus, opts('Focus'))
 end
 
 -- pass to setup along with your other options
