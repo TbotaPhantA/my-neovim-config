@@ -1,9 +1,14 @@
-vim.keymap.set("n", "<A-;>", vim.cmd.Ex)
+local opts = { noremap = true, silent = true }
+local keymap = vim.api.nvim_set_keymap
 
+-- INSERT
 -- delete word using Ctrl+backspace
-vim.api.nvim_set_keymap('i', '<C-BS>', '<C-S-W>', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-H>', '<C-S-W>', { noremap = true })
+keymap('i', '<C-BS>', '<C-S-W>', { noremap = true })
+keymap('i', '<C-H>', '<C-S-W>', { noremap = true })
 
--- NvimTree
-vim.keymap.set('n', '<leader>e', vim.cmd.NvimTreeToggle)
-
+-- NORMAL
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
