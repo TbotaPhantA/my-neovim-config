@@ -32,4 +32,12 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional
     },
   })
+  use ({
+    'akinsho/bufferline.nvim',
+    tag = "*",
+    requires = {
+      { 'nvim-tree/nvim-web-devicons' },
+      { 'moll/vim-bbye' },
+    },
+  })
 end)
