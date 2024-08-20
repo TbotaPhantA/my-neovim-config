@@ -17,3 +17,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
 keymap("n", "<A-w>", ":Bdelete<CR>", opts)
+
+-- vscode comment
+vim.keymap.set('n', '<C-_>', ':normal gcc<CR>', { desc = '[/] Toggle comment line' })
+vim.keymap.set('v', '<C-_>', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment selected' })
