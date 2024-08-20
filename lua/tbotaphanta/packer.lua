@@ -42,6 +42,13 @@ return require('packer').startup(function(use)
   use ({ "Pocco81/auto-save.nvim" })
   use ({ "tzachar/local-highlight.nvim" })
   use ({ 'stevearc/dressing.nvim' })
+  use ({
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  })
 
   -- lsp
 end)
