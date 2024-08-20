@@ -41,4 +41,5 @@ return require('packer').startup(function(use)
     },
   })
   use ({ "akinsho/toggleterm.nvim", tag = '*' })
+  use({ "Pocco81/auto-save.nvim" })
 end)
