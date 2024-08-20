@@ -17,7 +17,11 @@ return require('packer').startup(function(use)
   }
 
   -- colors
-  use ({ "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" })
+  use ({
+    'xiantang/darcula-dark.nvim',
+    requires = {"nvim-treesitter/nvim-treesitter"}
+  })
+
 
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ('mbbill/undotree')
