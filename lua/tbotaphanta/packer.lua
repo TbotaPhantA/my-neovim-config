@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- colors
   use ({
     'xiantang/darcula-dark.nvim',
     requires = {"nvim-treesitter/nvim-treesitter"}
@@ -40,6 +39,9 @@ return require('packer').startup(function(use)
     },
   })
   use ({ "akinsho/toggleterm.nvim", tag = '*' })
-  use({ "Pocco81/auto-save.nvim" })
-  use({ "tzachar/local-highlight.nvim" })
+  use ({ "Pocco81/auto-save.nvim" })
+  use ({ "tzachar/local-highlight.nvim" })
+  use ({ 'stevearc/dressing.nvim' })
+
+  -- lsp
 end)
