@@ -16,13 +16,8 @@ return require('packer').startup(function(use)
     }
   }
 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function ()
-      vim.cmd('colorscheme rose-pine')
-    end
-  })
+  -- colors
+  use ({ "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" })
 
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use ('mbbill/undotree')
