@@ -40,4 +40,5 @@ return require('packer').startup(function(use)
       { 'moll/vim-bbye' },
     },
   })
+  use ({ "akinsho/toggleterm.nvim", tag = '*' })
 end)
