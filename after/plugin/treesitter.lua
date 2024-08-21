@@ -4,7 +4,7 @@ require 'nvim-treesitter.install'.compilers = { 'gcc', 'zig' }
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "lua", "javascript", "typescript" },
+  ensure_installed = { "lua", "javascript", "typescript", 'html', 'css', 'scss', 'sql', 'go', 'json', 'c_sharp' },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
