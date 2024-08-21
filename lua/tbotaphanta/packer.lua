@@ -59,6 +59,23 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-vsnip'}
   use {'hrsh7th/vim-vsnip'}
   use {'rafamadriz/friendly-snippets'}
+  -- nvim-lspconfig
+  use ({
+    'neovim/nvim-lspconfig',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      {
+        "antosha417/nvim-lsp-file-operations",
+        requires = {
+          "nvim-lua/plenary.nvim",
+          "nvim-tree/nvim-tree.lua",
+        },
+        config = function()
+          require("lsp-file-operations").setup()
+        end,
+      }
+    }
+  })
   -- mason
   use ({
     'williamboman/mason.nvim',
@@ -67,5 +84,4 @@ return require('packer').startup(function(use)
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     }
   })
-  -- nvim-lspconfig
 end)
