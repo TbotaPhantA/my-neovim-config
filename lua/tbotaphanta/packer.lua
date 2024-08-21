@@ -59,6 +59,29 @@ return require('packer').startup(function(use)
       require("nvim-autopairs").setup {}
     end
   })
+  local highlight = {
+    "RainbowRed",
+    "RainbowYellow",
+    "RainbowBlue",
+    "RainbowOrange",
+    "RainbowGreen",
+    "RainbowViolet",
+    "RainbowCyan",
+  }
+
+  use ({
+    'lukas-reineke/indent-blankline.nvim',
+    config = function ()
+      require("ibl").setup({
+        indent = { highlight = highlight, char = "┊" },
+        whitespace = {
+          highlight = highlight,
+          remove_blankline_trail = false,
+        },
+        scope = { enabled = false },
+      })
+    end
+  })
 
   --nvim-cmp
   use {'hrsh7th/cmp-buffer'}
