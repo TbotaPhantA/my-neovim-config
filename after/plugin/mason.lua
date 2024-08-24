@@ -25,6 +25,7 @@ mason_lspconfig.setup({
     "html",
     "cssls",
     "lua_ls",
+    "jsonls",
   },
   automatic_installation = true,
 })
